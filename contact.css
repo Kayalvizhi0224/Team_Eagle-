@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders don't affect element width */
+}
+
+ body {
+      background: url('https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      color: #fff;
+    }
+
+img{
+    border-radius: 50%;
+}
+
+/* Desktop Navigation Bar */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20x;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav h1{
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+}
+
+.link a{
+    color: white;
+    text-decoration: none;
+}
+
+nav .link:last-child {
+    margin-left: 10px; /* Adjust spacing for the button */
+}
+
+nav button{
+    width: 100px;
+    height: 34px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 19px;
+    border: none;
+    cursor: pointer;
+}
+
+nav button:hover{
+    border: 3px solid white;
+    background-color: rgb(255, 0, 0);
+}
+
+.link a:hover{
+    border-bottom: 3px solid blue;
+    border-radius: 3px;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+
+ul li a{
+    margin-inline: 30px ;
+    font-size: 25px;
+}
+ul li a:hover{
+    border-bottom: 3px solid blue;
+    border-radius: 3;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+/* Hide hamburger icon and checkbox on desktop */
+.hamburger, #menu-toggle {
+    display: none;
+
+}
+.contact-section {
+  margin-top: 100px;  /* pushes content down */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+}
+
+ .contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .contact-info {
+      flex: 1;
+      margin-right: 150px;
+    }
+
+    .contact-info h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      text-align: left;
+      color: orangered;
+    }
+
+    .contact-info p {
+      font-size: 14px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .info-item i {
+      font-size: 22px;
+      background: #fff;
+      color: #111;
+      border-radius: 50%;
+      padding: 10px;
+      margin-right: 15px;
+    }
+
+    .info-item span {
+      color: #00c8ff;
+      font-weight: 600;
+    }
+
+    .info-item p {
+      color: #ddd;
+      font-size: 14px;
+    }
+    /* Default info-item styling already exists */
+
+.info-item i {
+  font-size: 22px;
+  background: #fff;
+  color: #111;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 15px;
+}
+
+.insta-icon {
+  color:#fff;  
+}
+
+.info-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+
+.contact-form {
+      flex: 1;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      color: #111;
+    }
+
+    .contact-form h3 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 25px;
+      margin-bottom: 15px;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      outline: none;
+      font-size: 14px;
+      background: transparent;
+    }
+
+    .contact-form textarea {
+      min-height: 100px;
+      resize: none;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      background: #00c8ff;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #009dcf;
+    }
+/*
+ * MOBILE STYLES
+ * This section is only applied on screens smaller than 768px.
+ */
+@media screen and (max-width: 768px) {
+  body {
+      background:#000;
+      color: #fff;
+    }
+    
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 30px;
+        position: relative;
+        background-color: black;
+         background: rgba(9, 9, 9, 0.89);
+         backdrop-filter: blur(100%); 
+        -webkit-backdrop-filter: blur(100%); 
+    }
+     nav h1 {
+        font-size: 19px; /* Adjust this value as needed for mobile */;
+    }
+    nav img {
+        width: 50px; /* Adjust this value as needed for mobile */
+        height: 50px;
+        background: rgba(9, 9, 9, 0.89);
+    }
+
+    /* Hamburger icon styling */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .bar {
+        width: 20px;
+        height:2px;
+        background-color: white;
+        margin: 5px auto;
+        display: block;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Hide the navigation links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 30%;
+        text-align: center;
+        position: absolute;
+        top: 80px; /* Position below the nav header */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin: 2px 0;
+    }
+
+    .nav-links button {
+        margin-top: 2px;
+    }
+    
+    /* Toggle menu on click of the checkbox */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+    * --- Contact Section Styles --- */
+.contact-section {
+    padding: 40px 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically on mobile */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: flex-start; /* Align text to the left */
+    margin-right: 0; /* Remove right margin for mobile */
+}
+
+.contact-info h2 {
+    color: #ffd700;
+    font-size: 2em;
+    margin-top: 0%;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.info-item {
+    display: flex;
+    justify-content:left;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.info-item i {
+    font-size: 1.5em;
+    color: #ffd700;
+    margin-right: 15px;
+    min-width: 30px;
+    text-align: left;
+}
+
+.info-item span {
+  align-items: left;
+  font-weight: bold;
+  font-size: 1.1em;
+  display: block;
+}
+
+.info-item p {
+    align-items: left;
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.contact-form {
+    width: 100%;
+    background-color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(165, 187, 3, 0.621);
+}
+
+.contact-form h3 {
+    text-align: center;
+    color: #ffd700;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #1a1a1a;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form button {
+      width: 100%;
+      padding: 12px;
+      background: #00c8ff;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #009dcf;
+    }
+}

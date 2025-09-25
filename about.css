@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders don't affect element width */
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #fff;
+}
+ 
+
+img{
+    border-radius: 50%;
+}
+
+/* Desktop Navigation Bar */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20x;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav h1{
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+}
+
+.link a{
+    color: white;
+    text-decoration: none;
+}
+
+nav .link:last-child {
+    margin-left: 10px; /* Adjust spacing for the button */
+}
+
+nav button{
+    width: 100px;
+    height: 34px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 19px;
+    border: none;
+    cursor: pointer;
+}
+
+nav button:hover{
+    border: 3px solid white;
+    background-color: rgb(255, 0, 0);
+}
+
+.link a:hover{
+    border-bottom: 3px solid blue;
+    border-radius: 3px;
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+
+ul li a{
+    margin-inline: 30px ;
+    font-size: 25px;
+}
+ul li a:hover{
+    border-bottom: 3px solid blue;
+    border-radius: 3;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+/* Hide hamburger icon and checkbox on desktop */
+.hamburger, #menu-toggle {
+    display: none;
+
+}
+.about-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 40px;
+}
+.about-section img{
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #ff4c29;
+}
+.about-content{
+    max-width: 600px;
+}
+.about-content h2{
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ff4c29;
+}
+.about-content p{
+    font-size: 0.90rem;
+    line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+    /* Main navigation container */
+    body {
+        font-size: 14px; /* Adjust this value as needed for mobile */
+}
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 30px;
+        position: relative;
+        background-color: black;
+         background: rgba(9, 9, 9, 0.89);
+         backdrop-filter: blur(100%); 
+        -webkit-backdrop-filter: blur(100%); 
+    }
+    nav h1 {
+        font-size: 19px; /* Adjust this value as needed for mobile */;
+    }
+    nav img {
+        width: 50px; /* Adjust this value as needed for mobile */
+        height: 50px;
+         background: rgba(9, 9, 9, 0.89);
+    }
+
+    /* Hamburger icon styling */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .bar {
+        width: 20px;
+        height:2px;
+        background-color: white;
+        margin: 5px auto;
+        display: block;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Hide the navigation links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 30%;
+        text-align: center;
+        position: absolute;
+        top: 80px; /* Position below the nav header */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin: 2px 0;
+    }
+
+    .nav-links button {
+        margin-top: 2px;
+    }
+    
+    /* Toggle menu on click of the checkbox */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+    .about-section {
+        flex-direction: column; /* Stack items vertically */
+        padding: 20px; /* Reduce padding for smaller screens */
+        gap: 20px; /* Adjust gap between elements */
+        text-align: center; /* Center-align text within the section */
+    }
+
+    .about-content {
+        max-width: 100%; /* Allow content to take full width */
+        padding: 0 15px; /* Add some horizontal padding to the content blocks */
+    }
+
+    .about-content h1, .about-content h2{
+        text-align: center; /* Ensure headings are centered */
+        font-size: 28px /* Adjust heading sizes if needed */
+    }
+    .about-content h3{
+      text-align: left;
+      font-size: 20px;
+    }
+
+    .about-content p {
+        font-size: 15px; /* Slightly adjust paragraph font size */
+        text-align: left; /* Keep paragraphs left-aligned for readability */
+        line-height: 1.5; /* Adjust line height for better readability */
+    }
+
+    /* Adjust the image specifically for mobile */
+    .trainer-image {
+        width: 80%; /* Make image responsive, taking 80% of its container */
+        max-width: 300px; /* Prevent it from becoming too large */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 15px; /* Keep the desired border-radius */
+        margin: 20px auto; /* Center the image and add vertical margin */
+        display: block; /* Ensure margin auto works for centering */
+    }
+}
