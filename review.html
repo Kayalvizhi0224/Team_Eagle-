@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM EAGLE</title>
+    <link rel="stylesheet" href="review.css">
+    </head>
+    <body>
+      <section class="transformation">
+      <h2>Client Body Transformations</h2>
+      <div class="gallery">
+    
+         <div class="photo">
+         <img src="trans1.jpg" alt="Client 1 Transformation">
+         <p><strong>Client 1:</strong> Lost 12kg in 6 months!</p>
+         </div>
+
+        <div class="photo">
+        <img src="trans2.jpg" alt="Client 2 Transformation">
+        <p><strong>Client 2:</strong> Gained muscle & improved strength.</p>
+        </div>
+
+       <div class="photo">
+       <img src="trans3.jpg" alt="Client 3 Transformation">
+       <p><strong>Client 3:</strong> Amazing fat loss journey!</p>
+       </div>
+
+       <div class="photo">
+       <img src="trans4.jpg" alt="Client 3 Transformation">
+       <p><strong>Client 4:</strong>consistent training and diet.</p>
+
+      </div>
+      </section>
+
+
+  <!-- Review Form -->
+  <section class="review-form">
+    <h2>Leave Your Review</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="access_key" value="8f1f3774-f0e8-4205-b7bb-a5b2766e0157">
+
+
+      <label>Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Your Review:</label>
+      <textarea name="message" rows="5" required></textarea>
+
+     <label for="photo">Upload Your Transformation Photo Link: (Google Drive/Dropbox)</label>
+     <input type="url" id="photo" name="Transformation Photo" placeholder="Paste Transformation Photo link here" required>
+
+
+      <button type="submit">Submit Review</button><br>
+      <a href="index.html" class="back-btn">⬅ Back</a>
+    </form>
+  </section>
+</body>
+</html>
